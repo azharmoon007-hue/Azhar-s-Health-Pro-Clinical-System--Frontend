@@ -201,47 +201,6 @@ export const environment = {
 };
 ```
 
----
-
-## 🗺 API Integration Map
-
-Every service in `src/app/core/services/` communicates with the standard Spring Boot REST API:
-
-| Service | Backend Resource | REST Endpoints |
-|---|---|---|
-| `AuthService` | `/api/v1/auth` | `POST /login`, `POST /register`, `POST /refresh`, `POST /forgot-password`, `POST /reset-password` |
-| `UserService` | `/api/v1/users` | `GET /users`, `GET /users/{id}`, `PATCH /users/{id}/status` |
-| `PatientService` | `/api/v1/patients` | `GET /patients`, `GET /patients/{id}`, `POST /patients`, `PUT /patients/{id}`, `DELETE /patients/{id}` |
-| `DoctorService` | `/api/v1/doctors` | `GET /doctors`, `GET /doctors/search`, `GET /doctors/{id}`, `GET /doctors/{id}/slots` |
-| `AppointmentService` | `/api/v1/appointments` | `GET /appointments`, `POST /appointments`, `POST /appointments/{id}/cancel`, `PATCH /appointments/{id}/reschedule`, `PATCH /appointments/{id}/status` |
-| `MedicalRecordService` | `/api/v1/medical-records` | `GET /medical-records`, `GET /medical-records/{id}`, `POST /medical-records` |
-| `PrescriptionService` | `/api/v1/prescriptions` | `GET /prescriptions`, `GET /prescriptions/{id}`, `POST /prescriptions` |
-| `LaboratoryService` | `/api/v1/laboratory` | `GET /laboratory/tests`, `GET /laboratory/orders`, `POST /laboratory/orders`, `PATCH /laboratory/orders/{id}/status`, `POST /laboratory/results` |
-| `BillingService` | `/api/v1/invoices` | `GET /invoices`, `GET /invoices/{id}`, `POST /invoices/{id}/payments` |
-| `HospitalService` | `/api/v1/hospitals` | `GET /hospitals`, `GET /hospitals/departments`, `POST /hospitals` |
-| `DocumentService` | `/api/v1/documents` | `GET /documents`, `POST /documents/upload`, `DELETE /documents/{id}` |
-| `NotificationService` | `/api/v1/notifications` | `GET /notifications`, `PATCH /notifications/{id}/read`, `PATCH /notifications/read-all` |
-| `MessageService` | `/api/v1/messages` | `GET /messages/conversations`, `GET /messages`, `POST /messages` |
-| `ReviewService` | `/api/v1/reviews` | `GET /reviews`, `POST /reviews` |
-| `DashboardService` | `/api/v1/dashboard` | `GET /dashboard/patient`, `GET /dashboard/doctor`, `GET /dashboard/admin` |
-| `AuditLogService` | `/api/v1/audit-logs` | `GET /audit-logs` |
-
----
-
-## 🔒 Security & Interceptors
-
-1. **JWT Automatic Attachment**: `authInterceptor` inspects outbound HTTP requests. If a token is stored in `localStorage`, it attaches:
-   ```http
-   Authorization: Bearer <JWT_TOKEN>
-   ```
-2. **Centralized Error Handling**:
-   - `401 Unauthorized`: Automatically clears user state and redirects to `/auth/login?returnUrl=...`.
-   - `403 Forbidden`: Displays user-friendly warning toast without exposing internal routes.
-   - `500 Internal Server Error`: Shows sanitized, user-friendly message (`"Our clinical servers are currently experiencing issues. Please try again shortly."`) without exposing raw Java stack traces.
-3. **Route Protection**:
-   - `authGuard`: Enforces active session.
-   - `guestGuard`: Prevents authenticated users from viewing login/register pages.
-   - `roleGuard`: Validates role permissions defined in route `data: { roles: [...] }`.
 
 ---
 
