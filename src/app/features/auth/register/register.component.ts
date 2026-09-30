@@ -39,7 +39,7 @@ function passwordMatchValidator(control: AbstractControl): { [key: string]: bool
             <span>Patient & Staff Onboarding</span>
           </div>
           <h1 class="auth-title">Create Platform Account</h1>
-          <p class="auth-subtitle">Join HealthPulse to securely schedule visits and view medical records</p>
+          <p class="auth-subtitle">Join Azhar's Health Pro to securely schedule visits and view medical records</p>
         </div>
 
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="auth-form" novalidate>

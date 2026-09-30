@@ -31,7 +31,7 @@ import { NotificationToastService } from '../../../core/services/notification-to
         <div class="auth-header">
           <div class="brand-badge">
             <mat-icon>local_hospital</mat-icon>
-            <span>HealthPulse Enterprise</span>
+            <span>Azhar's Health Pro Enterprise</span>
           </div>
           <h1 class="auth-title">Clinical Portal Sign In</h1>
           <p class="auth-subtitle">Access your clinical records, schedule, or practice management dashboard</p>

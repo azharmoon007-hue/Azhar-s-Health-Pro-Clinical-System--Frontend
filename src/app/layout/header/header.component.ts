@@ -44,7 +44,7 @@ import { Role } from '../../core/models';
             <mat-icon>monitor_heart</mat-icon>
           </div>
           <div class="brand-text">
-            <span class="brand-title">HealthPulse</span>
+            <span class="brand-title">Azhar's Health Pro</span>
             <span class="brand-badge">Clinical OS</span>
           </div>
         </div>

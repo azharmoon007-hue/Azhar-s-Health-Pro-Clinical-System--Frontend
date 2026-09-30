@@ -1,5 +1,5 @@
 /**
- * HealthPulse Healthcare Management Platform - Comprehensive End-to-End Test Suite
+ * Azhar's Health Pro - Comprehensive End-to-End Test Suite
  * Runner: Playwright / Cypress compatible specs
  * Covers all 15 mandated clinical & administrative workflows
  */
@@ -8,7 +8,7 @@ import { test, expect } from '@playwright/test';
 
 const BASE_URL = process.env['BASE_URL'] || 'http://localhost:4200';
 
-test.describe('HealthPulse Healthcare Platform - Clinical Flows', () => {
+test.describe("Azhar's Health Pro - Clinical Flows", () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto(BASE_URL);

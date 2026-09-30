@@ -1,4 +1,4 @@
-# HealthPulse — Enterprise Healthcare Management Platform (Angular Frontend)
+# Azhar's Health Pro — Enterprise Healthcare Management Platform (Angular Frontend)
 
 [![Angular](https://img.shields.io/badge/Angular-19.2-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@ A modern, production-grade **Electronic Health Records (EHR) & Clinical Operatio
 
 ## 🏥 Platform Overview
 
-HealthPulse integrates hospital management, patient care delivery, laboratory diagnostics, electronic prescriptions, appointment scheduling, and automated billing into a cohesive, role-governed single page application (SPA).
+Azhar's Health Pro integrates hospital management, patient care delivery, laboratory diagnostics, electronic prescriptions, appointment scheduling, and automated billing into a cohesive, role-governed single page application (SPA).
 
 ### Supported Roles & Portals (8 Distinct Personas)
 1. **`ADMIN`**: Hospital campus governance, department definitions, staff provisioning, HIPAA audit logs, executive clinical/financial reporting, system configuration.

@@ -309,7 +309,7 @@ export class SettingsComponent implements OnInit {
   saving = false;
 
   settingsForm: FormGroup = this.fb.group({
-    systemName: ['HealthPulse Integrated Clinical System', Validators.required],
+    systemName: ["Azhar's Health Pro Clinical System", Validators.required],
     timezone: ['America/New_York', Validators.required],
     currency: ['USD', Validators.required],
     slotDurationMinutes: [30, [Validators.required, Validators.min(10)]],

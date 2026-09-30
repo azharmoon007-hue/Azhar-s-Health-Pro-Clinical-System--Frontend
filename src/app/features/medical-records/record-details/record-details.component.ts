@@ -32,7 +32,7 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
         <div class="card-glass p-8 clinical-sheet">
           <div class="sheet-header">
             <div>
-              <h3>HealthPulse Clinical Documentation</h3>
+              <h3>Azhar's Health Pro Clinical Documentation</h3>
               <p>Department of Cardiovascular & Internal Medicine</p>
             </div>
             <div class="patient-card-mini">

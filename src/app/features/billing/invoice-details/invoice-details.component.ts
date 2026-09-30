@@ -41,7 +41,7 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
       <div class="invoice-paper card-glass" id="printable-invoice">
         <div class="inv-head">
           <div>
-            <h2>HealthPulse Hospital Systems</h2>
+            <h2>Azhar's Health Pro Hospital Systems</h2>
             <p>55 Fruit Street, Boston, MA 02114</p>
             <p>Tax Registration: US-MED-994821</p>
           </div>

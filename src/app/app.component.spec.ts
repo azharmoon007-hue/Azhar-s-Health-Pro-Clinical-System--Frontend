@@ -16,9 +16,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'HealthPulse Healthcare Platform' title`, () => {
+  it(`should have the 'Azhar\\'s Health Pro' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('HealthPulse Healthcare Platform');
+    expect(app.title).toEqual("Azhar's Health Pro");
   });
 });
