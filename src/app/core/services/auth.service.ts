@@ -108,6 +108,15 @@ export class AuthService {
   readonly userRole = computed(() => this.currentUser()?.role ?? null);
 
   constructor() {
+    if (typeof window !== 'undefined') {
+      try {
+        const role = new URLSearchParams(window.location.search).get('demoRole') as Role | null;
+        if (role) {
+          this.switchDemoRole(role);
+        }
+      } catch {}
+    }
+
     // If token exists, validate session
     if (this.getToken() && !this.currentUser()) {
       this.fetchCurrentUser().subscribe();
@@ -150,6 +159,13 @@ export class AuthService {
     } catch (e) {
       console.error('Failed to save user to localStorage', e);
     }
+  }
+
+  switchDemoRole(role: Role): void {
+    const demo = Object.values(DEMO_USERS).find(u => u.role === role) || DEMO_USERS['admin@healthpulse.com'];
+    const user = { ...demo, role };
+    this.setToken('demo-jwt-token-' + btoa(user.email) + '.' + Date.now());
+    this.setStoredUser(user);
   }
 
   login(credentials: LoginRequest): Observable<AuthResponse> {

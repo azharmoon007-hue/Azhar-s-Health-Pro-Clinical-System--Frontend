@@ -26,6 +26,73 @@ Azhar's Health Pro integrates hospital management, patient care delivery, labora
 
 ---
 
+## 📸 Platform Screenshots / UI Gallery
+
+Explore high-resolution visual captures from **Azhar's Health Pro**, highlighting its modern glassmorphism design, clinical workflows, and multi-persona interfaces:
+
+### 1. 📊 Patient Health Dashboard
+> Real-time health metrics, upcoming doctor visits, Chart.js clinical trends, and rapid action triggers.
+
+![Patient Health Dashboard](docs/screenshots/01-clinical-dashboard.png)
+
+---
+
+### 2. 👨‍⚕️ Specialist Directory & Doctor Discovery
+> Advanced medical directory with specialty filter chips, hospital tags, consultation fees, and verified patient reviews.
+
+![Doctor Search](docs/screenshots/02-doctor-search.png)
+
+---
+
+### 3. 🗓️ Multi-Step Appointment Booking
+> Intuitive consultation booking stepper with interactive date picker, real-time slot conflict prevention, and visit reason memo.
+
+![Appointment Booking](docs/screenshots/03-appointment-booking.png)
+
+---
+
+### 4. 📁 Electronic Health Records (EHR)
+> Tabbed clinical records index detailing diagnoses, attending physicians, encounter vitals, and visit timelines.
+
+![Electronic Health Records](docs/screenshots/04-clinical-records.png)
+
+---
+
+### 5. ℞ Printable Digital Prescription Sheet
+> Official hospital prescription document featuring patient vitals, diagnosis, multi-medication dosage schedules, and doctor's signature.
+
+![Digital Prescription Sheet](docs/screenshots/05-digital-prescription.png)
+
+---
+
+### 6. 🧪 Diagnostic Laboratory Orders
+> Laboratory requisition worklist tracking test specimens, clinical urgency tags, reference ranges, and diagnostic reports.
+
+![Laboratory Orders](docs/screenshots/06-laboratory-orders.png)
+
+---
+
+### 7. 💳 Medical Invoice & Billing Statement
+> Itemized clinical invoice detailing consultation fees, diagnostics, tax calculations, discounts, and payment settlement actions.
+
+![Medical Invoice](docs/screenshots/07-billing-invoice.png)
+
+---
+
+### 8. 📈 Hospital Administration & Analytics
+> Executive reporting suite with Chart.js monthly revenue trajectories, patient census metrics, and department breakdowns.
+
+![Hospital Administration Reports](docs/screenshots/08-admin-reports.png)
+
+---
+
+### 9. 🔐 Clinical Portal Authentication
+> Enterprise dual-pane login portal with quick-access role switcher for all 8 hospital personas.
+
+![Login Portal](docs/screenshots/09-login-portal.png)
+
+---
+
 ## 🛠 Technology Stack
 
 - **Framework**: Angular 19.2+ (Standalone Components, Zoneless-compatible Signals architecture)
@@ -171,7 +238,7 @@ ng serve --port 4200
 ```
 Open your browser and navigate to: **`http://localhost:4200`**
 
-> **Instant Demo Tip**: HealthPulse includes built-in demo credentials on the login screen. Click any role badge (**Patient**, **Doctor**, **Admin**, **Lab Tech**, **Pharmacist**, **Accountant**) to instantly populate credentials and experience that role's tailored portal!
+> **Instant Demo Tip**: Azhar's Health Pro includes built-in demo credentials on the login screen. Click any role badge (**Patient**, **Doctor**, **Admin**, **Lab Tech**, **Pharmacist**, **Accountant**) to instantly populate credentials and experience that role's tailored portal!
 
 ---
 
@@ -184,9 +251,9 @@ Environment files configure the Spring Boot backend REST API base URL:
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8080/api/v1',
-  appName: 'HealthPulse Healthcare Platform (Dev)',
+  appName: "Azhar's Health Pro (Dev)",
   tokenKey: 'healthpulse_auth_token',
-  userKey: 'healthpulse_auth_user'
+  userKey: 'healthpulse_user_data'
 };
 ```
 
@@ -195,9 +262,9 @@ export const environment = {
 export const environment = {
   production: true,
   apiUrl: '/api/v1', // Proxied via Nginx in Docker or your ingress controller
-  appName: 'HealthPulse Healthcare Platform',
+  appName: "Azhar's Health Pro",
   tokenKey: 'healthpulse_auth_token',
-  userKey: 'healthpulse_auth_user'
+  userKey: 'healthpulse_user_data'
 };
 ```
 
@@ -252,8 +319,8 @@ The test suite covers:
 ### Multi-Stage Container Build
 Build and run the production container:
 ```bash
-docker build -t healthpulse-frontend:latest .
-docker run -d -p 4200:80 --name healthpulse healthpulse-frontend:latest
+docker build -t azhars-health-pro-frontend:latest .
+docker run -d -p 4200:80 --name azhars-health-pro azhars-health-pro-frontend:latest
 ```
 
 ### Docker Compose
